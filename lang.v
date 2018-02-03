@@ -1256,26 +1256,6 @@ Axiom safe_mn : forall σ I Q R c1 c2 n,
       safe m c2 σ' I R) ->
     safe n (c1;;c2) σ I R.
 
-(* Definition total_hoare P c Q : Prop := *)
-(*   forall s h t, *)
-(*     (s,h,t) |= P -> *)
-(*     let H := mapPrFst fst h in *)
-(*     not (multi cevalSm (nonterminal c (s,H,t)) abort) /\ *)
-(*     forall s' h' t', *)
-(*       let H' := mapPrFst fst h' in *)
-(*       multi cevalSm (nonterminal c (s',H',t')) (nonterminal SKIP (s',H',t')) /\ *)
-(*       (s',h',t')|= Q. *)
-
-(* Definition totalJadge I P C Q := *)
-(*   forall s h t, *)
-(*     (s,h,t) |= AsStar I P -> *)
-(*     let H := mapPrFst fst h in *)
-(*     not (multi cevalSm (nonterminal C (s,H,t)) abort) /\ *)
-(*     forall s' h' t', *)
-(*       let H' := mapPrFst fst h' in *)
-(*       multi cevalSm (nonterminal C (s',H',t')) (nonterminal SKIP (s',H',t')) /\ *)
-(*       (s',h',t') |= AsStar I Q. *)
-
 (* Theorem 4 *)
 Axiom tripleSafe : forall I P C Q n σ,
     I |- {{P}} C {{Q}} ->

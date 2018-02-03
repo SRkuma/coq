@@ -1,4 +1,3 @@
-# 修士論文用レポジトリ
 ## Quantitative Reasoning for Proving Lock-Freedom
 [Hoffmann+ 2013]の論理体系をCoqで形式化  
 Coqのバージョンは8.6.1  
